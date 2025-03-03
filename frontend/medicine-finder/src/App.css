@@ -1,0 +1,140 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.wrapper {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+  width: 40%;
+  min-width: 450px;
+  text-align: center;
+}
+
+.title {
+  font-size: 26px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  outline: none;
+  width: 70%;
+}
+
+.button {
+  padding: 12px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+.list-container {
+  max-height: 350px;
+  overflow-y: auto;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+}
+
+.medicine-card {
+  background-color: #fafafa;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.08);
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.medicine-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.medicine-name {
+  font-size: 18px;
+  font-weight: bold;
+  color: #007bff;
+}
+
+.domain {
+  background-color: #e3f2fd;
+  color: #007bff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+}
+
+.full-name {
+  font-size: 14px;
+  font-weight: bold;
+  color: #555;
+  margin-top: 5px;
+}
+
+.details {
+  font-size: 13px;
+  color: #666;
+  margin-top: 5px;
+}
+
+.no-data {
+  text-align: center;
+  color: red;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.red-text {
+  color: red;
+}
+
+.green-text {
+  color: green;
+}
+
+.available-medicines {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: red;
+}
