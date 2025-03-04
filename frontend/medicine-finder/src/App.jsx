@@ -3,7 +3,7 @@ import medicines from "./data/medicines";
 import "./App.css";
 
 const App = () => {
-    const [searchMode, setSearchMode] = useState("problem"); // "problem" or "medicine"
+    const [searchMode, setSearchMode] = useState("problem"); 
     const [query, setQuery] = useState("");
     const [filteredMedicines, setFilteredMedicines] = useState(medicines);
 
@@ -17,13 +17,11 @@ const App = () => {
     
         let results = [];
         if (searchMode === "problem") {
-            // 🔍 Search medicines by problem
             results = medicines.filter(m => lowerQuery.includes(m.problem.toLowerCase()));
         } else {
-            // 🔍 Search problem by medicine name (Fix)
             results = medicines.filter(m => 
                 m.medicine_name
-                    .split(", ") // Convert comma-separated string into array
+                    .split(", ") 
                     .some(med => med.toLowerCase().includes(lowerQuery))
             );
         }
@@ -37,7 +35,6 @@ const App = () => {
             <div className="wrapper">
                 <h1 className="title">💊 Medicine Finder</h1>
 
-                {/* Dropdown for selecting search mode */}
                 <div className="search-mode">
                     <label>Search by:</label>
                     <select value={searchMode} onChange={(e) => setSearchMode(e.target.value)}>
@@ -46,7 +43,6 @@ const App = () => {
                     </select>
                 </div>
 
-                {/* Search Input */}
                 <div className="search-container">
                     <input
                         type="text"
@@ -57,7 +53,6 @@ const App = () => {
                     <button onClick={searchMedicine} className="button">🔍 Search</button>
                 </div>
 
-                {/* Medicine List */}
                 <div className="list-container">
                     {filteredMedicines.length > 0 && (
                         <p className="available-medicines">Available {searchMode === "problem" ? "Medicines" : "Problems"}</p>
